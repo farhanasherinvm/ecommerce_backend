@@ -18,7 +18,7 @@ This is a backend system for an e-commerce application built with **Django REST 
 
 ### 1. Clone the Repository
 
-git clone https://github.com/farhanasherinvm/ecommerce
+git clone https://github.com/farhanasherinvm/ecommerce_backend
 
 cd ecommerce
 
