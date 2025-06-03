@@ -50,11 +50,8 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['category']  # 🔍 Filter by category
-    search_fields = ['name']         # 🔍 Search by product name
     def get_permissions(self):
-        if self.request.method in ['POST', 'PATCH', 'DELETE']:
+        if self.request.method in ['POST', 'PUT', 'PATCH', 'DELETE']:
             return [IsAdminUser()]
         return []
 
